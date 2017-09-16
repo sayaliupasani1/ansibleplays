@@ -1,0 +1,10 @@
+
+[webservers]
+192.168.1.173  ansible_user=test
+
+[dns_servers]
+192.168.1.195 ansible_user=sayali
+
+[servers:children]
+webservers
+dns_servers

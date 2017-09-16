@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Ensure NTP is installed
+      apt: name=ntp state=installed
+      become: yes
+    - name: Ensure NTP is running
+      service: name=ntp state=started enabled=yes
+      sudo: true
+  vars_prompt:
+    - name: "ansible_sudo_pass"
+      promt: "sudo password"
+      private: no
