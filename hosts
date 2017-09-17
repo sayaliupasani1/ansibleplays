@@ -1,9 +1,9 @@
 
 [webservers]
-192.168.1.173  ansible_user=test
+192.168.2.56  ansible_user=test
 
 [dns_servers]
-192.168.1.195 ansible_user=sayali
+192.168.2.138 ansible_user=sayali
 
 [servers:children]
 webservers

@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  tasks:
+    - name: Install Apache
+      apt: name=apache2
+      become: yes
+    - name: Start Apache
+      command: service apache2 start
+      become: yes
+    - name: Ensure Apache is running and configure it to run at boot
+      service: name=apache2 state=started
+      become: yes
